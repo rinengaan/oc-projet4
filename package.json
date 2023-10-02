@@ -1,0 +1,29 @@
+{
+    "name": "oc-projet4",
+    "version": "1.0.0",
+    "description": "Ohmyfood",
+    "main": "index.js",
+    "scripts": {
+        "sass": "sass --watch ./sass/styles.scss:assets/styles.css",
+        "prefix": "postcss ./assets/styles.css --use autoprefixer -d ./assets/prefixed/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rinengaan/oc-projet4.git"
+    },
+    "author": "Julia AROUX",
+    "license": "ISC",
+    "browserslist": "last 4 versions",
+    "bugs": {
+        "url": "https://github.com/rinengaan/oc-projet4/issues"
+    },
+    "homepage": "https://github.com/rinengaan/oc-projet4#readme",
+    "devDependencies": {
+        "autoprefixer": "^10.4.14",
+        "sass": "^1.66.1"
+    },
+    "dependencies": {
+        "postcss": "^8.4.21",
+        "postcss-cli": "^10.1.0"
+    }
+}
