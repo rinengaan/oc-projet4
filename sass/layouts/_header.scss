@@ -1,0 +1,15 @@
+/*entête logo du site*/
+header {
+    background-color: rgba(234, 234, 234, 1);
+    h1 {
+        position: relative;
+        font-family: 'Shrikhand', cursive;
+        text-align: center;
+        width: 100%;
+        height: 63px;
+        background-color: white;
+        @include base-shadow;
+        z-index: 1;
+    }
+}
+

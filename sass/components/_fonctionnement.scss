@@ -1,0 +1,52 @@
+.tuto {
+    counter-reset: numbers;
+    
+    & h2 {
+        font-family: 'Roboto', sans-serif;
+        margin-top: 10px;
+        padding-left: 15px;
+        padding-bottom: 10px;
+        font-size: 24px;
+    }
+    & ol {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding:  20px 68px 20px;
+    }
+    & li {
+        position: relative;
+        &::before{
+            content:counter(numbers) ;
+            counter-increment: numbers;
+            display:grid;
+            place-items: center;
+            color: white;
+            background-color: rgba(147, 86, 220, 1);
+            width: 2 * $tuto-numbers;
+            height: 2 * $tuto-numbers;
+            bottom: $tuto-numbers;
+            left: -$tuto-numbers;
+            border-radius: 50%;
+            position: absolute;
+            
+        }
+        list-style-type: none;
+        background-color: #f6f6f6;
+        padding: 1.5rem 2rem;
+        border: 1px transparent ;
+        flex-grow: 1;
+        width: 335px;
+        height: 72px;
+        border-radius: 20px;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        margin-bottom: 10px;
+        @include button-shadow
+    }
+    & i {
+        margin-right: 30px;
+        color:rgba(126, 126, 126, 1) ;
+    }
+}

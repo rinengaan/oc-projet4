@@ -1,0 +1,10 @@
+    button {
+        font-size: 16px;
+        font-weight: 500;
+        color: white;
+        border: none;
+        margin-bottom: 30px;
+        @include base-button;
+        @include button-shadow;
+
+    }
