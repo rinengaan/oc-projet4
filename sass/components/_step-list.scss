@@ -42,6 +42,11 @@
         border-radius: 50%;
         position: absolute;
     }
+    &:hover i {
+            color: rgba(147, 86, 220, 1);
+    }
+    
+
 }
 
 & i {
