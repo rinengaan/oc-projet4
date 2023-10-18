@@ -6,3 +6,42 @@ h2 {
     padding-bottom: 10px;
     font-size: 24px;
 }
+/*page restaurant image*/
+.cover-image {
+    height: 275px;
+    width: 100%;
+}
+/*menu pages restaurants*/
+.menus-container {
+    background-color: rgba(246, 246, 246, 1);
+    border-radius: 35px 35px 0 0;
+    position: relative;
+    margin-top: -50px;
+
+    h2 {
+        font-weight: 600;
+        font-style: italic;
+        font-size: 25px;
+        padding-top: 20px;
+        font-family: 'Shrikhand', cursive;
+    }
+    h3 {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+    }
+
+    .title-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        i{
+            font-size: 1.5rem;
+                margin-top: 17px;
+                margin-right: 40px;
+        }
+    }
+    .cta{
+    display: flex;
+    justify-content: center;
+    }
+}

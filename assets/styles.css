@@ -15,14 +15,36 @@ header {
   background-color: rgb(234, 234, 234);
 }
 header h1 {
-  position: relative;
   font-family: "Shrikhand", cursive;
   text-align: center;
-  width: 100%;
+  padding: 0 20px;
   height: 63px;
+  width: 100%;
+  font-size: 30px;
+  line-height: 63px;
+  background-color: white;
+}
+header .title-arrow {
+  width: auto;
+}
+
+nav {
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+  width: 100%;
+  align-items: center;
+  gap: 55px;
   background-color: white;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
   z-index: 1;
+}
+nav .fa-solid {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  font-size: 26px;
+  justify-content: center;
 }
 
 /*Localisation "Paris Belleville*/
@@ -32,6 +54,45 @@ h2 {
   padding-left: 15px;
   padding-bottom: 10px;
   font-size: 24px;
+}
+
+/*page restaurant image*/
+.cover-image {
+  height: 275px;
+  width: 100%;
+}
+
+/*menu pages restaurants*/
+.menus-container {
+  background-color: rgb(246, 246, 246);
+  border-radius: 35px 35px 0 0;
+  position: relative;
+  margin-top: -50px;
+}
+.menus-container h2 {
+  font-weight: 600;
+  font-style: italic;
+  font-size: 25px;
+  padding-top: 20px;
+  font-family: "Shrikhand", cursive;
+}
+.menus-container h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+.menus-container .title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menus-container .title-container i {
+  font-size: 1.5rem;
+  margin-top: 17px;
+  margin-right: 40px;
+}
+.menus-container .cta {
+  display: flex;
+  justify-content: center;
 }
 
 /*Section explorer*/
@@ -99,6 +160,7 @@ footer i {
   height: 16px;
 }
 
+/*card page index*/
 .menu-cards {
   background-color: #f6f6f6;
   padding: 1rem;
@@ -146,6 +208,7 @@ footer i {
   padding-top: 0.5rem;
 }
 
+/*fonctionnement index*/
 .tuto {
   counter-reset: numbers;
   padding-left: 1rem;
@@ -191,6 +254,7 @@ footer i {
   color: rgb(126, 126, 126);
 }
 
+/*boutton page index*/
 button {
   font-size: 16px;
   font-weight: 500;
@@ -200,8 +264,79 @@ button {
   border-radius: 25px;
   width: 218px;
   height: 50px;
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(to top, #9356DC, #FF79DA);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+/*boutton pages restaurants*/
+.button-order {
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  border: none;
+  margin-bottom: 30px;
+  border-radius: 25px;
+  width: 186px;
+  height: 50px;
+  background: linear-gradient(to top, #9356DC, #FF79DA);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+/*pages rstaurants menus*/
+.dishes-type {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 1.5rem;
+}
+.dishes-type > h3 {
+  position: relative;
+  padding-bottom: 10px;
+}
+.dishes-type > h3::before {
+  content: "";
+  position: absolute;
+  top: 27px;
+  border-bottom: 3px solid rgb(153, 226, 208);
+  width: 40px;
+}
+.dishes-type .dish-container {
+  display: flex;
+  align-items: center;
+  background-color: #f6f6f6;
+  border: 1px transparent;
+  border-radius: 15px;
+  height: 70px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  margin-bottom: 10px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+.dishes-type .dish-container .dish-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 5px;
+  padding-left: 10px;
+}
+.dishes-type .dish-container .dish-content h3 {
+  font-weight: 700;
+  font-size: 18px;
+}
+.dishes-type .dish-container .dish-content p {
+  font-size: 15px;
+}
+.dishes-type .dish-container .dish-price {
+  display: flex;
+  justify-content: center;
+  height: inherit;
+  align-items: flex-end;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 10px;
+}
+.dishes-type .dish-container .dish-checked {
+  display: none;
 }
 
 /*# sourceMappingURL=styles.css.map */

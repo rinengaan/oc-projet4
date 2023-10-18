@@ -1,3 +1,4 @@
+    /*boutton page index*/
     button {
         font-size: 16px;
         font-weight: 500;
@@ -6,5 +7,14 @@
         margin-bottom: 30px;
         @include base-button;
         @include button-shadow;
-
     }
+/*boutton pages restaurants*/
+        .button-order {
+            font-size: 16px;
+            font-weight: 500;
+            color: white;
+            border: none;
+            margin-bottom: 30px;
+            @include base-button(186px);
+            @include button-shadow;
+        }
