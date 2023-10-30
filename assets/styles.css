@@ -2,6 +2,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css");
+@keyframes check-mark {
+  0% {
+    transform: rotateX(-270deg);
+  }
+  100% {
+    transform: rotateX(0);
+  }
+}
+@keyframes disappear {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+@keyframes glissement {
+  from {
+    margin-left: 110%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
 *,
 ::after,
 ::before {
@@ -52,6 +78,12 @@ nav .fa-solid {
   justify-content: center;
 }
 
+header nav,
+main section,
+footer {
+  padding: 0 1rem;
+}
+
 /*Localisation "Paris Belleville*/
 h2 {
   font-family: "Roboto", sans-serif;
@@ -91,9 +123,21 @@ h2 {
   align-items: center;
 }
 .menus-container .title-container i {
+  position: absolute;
+  right: 0;
   font-size: 1.5rem;
   margin-top: 17px;
   margin-right: 40px;
+}
+.menus-container .title-container .fa-heart.fa-solid {
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 0;
+}
+.menus-container .title-container .fa-heart.fa-solid:hover {
+  opacity: 1;
 }
 .menus-container .cta {
   display: flex;
@@ -115,6 +159,21 @@ h2 {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   margin-bottom: 20px;
+}
+
+.loader {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  background-color: whitesmoke;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.9;
+  animation: disappear 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+  transform-origin: top;
 }
 
 footer {
@@ -209,6 +268,16 @@ footer i {
   top: 1rem;
   font-size: 1.5rem;
 }
+.menu-cards .fa-solid.fa-heart {
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 0;
+}
+.menu-cards .fa-solid.fa-heart:hover {
+  opacity: 1;
+}
 .menu-cards h3 {
   padding-top: 0.5rem;
 }
@@ -229,13 +298,11 @@ footer i {
   position: relative;
   list-style-type: none;
   background-color: #f6f6f6;
-  padding: 0 2rem;
   border: 1px transparent;
   flex-grow: 1;
   line-height: 72px;
   height: 72px;
   border-radius: 20px;
-  text-align: center;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   margin-bottom: 10px;
@@ -253,11 +320,13 @@ footer i {
   left: -1rem;
   border-radius: 50%;
   position: absolute;
+  text-align: center;
 }
 .tuto li:hover i {
   color: rgb(147, 86, 220);
 }
 .tuto i {
+  margin-left: 46px;
   margin-right: 30px;
   color: rgb(126, 126, 126);
 }
@@ -274,6 +343,9 @@ button {
   height: 50px;
   background: linear-gradient(to top, #9356DC, #FF79DA);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+button:hover {
+  transform: scale(1.2);
 }
 
 /*boutton pages restaurants*/
@@ -318,23 +390,55 @@ button {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   margin-bottom: 10px;
+  overflow: hidden;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  animation: glissement 1s backwards;
 }
-.dishes-type .dish-container .dish-content {
+.dishes-type .dish-container:nth-child(1) {
+  animation-delay: 100ms;
+}
+.dishes-type .dish-container:nth-child(2) {
+  animation-delay: 200ms;
+}
+.dishes-type .dish-container:nth-child(3) {
+  animation-delay: 300ms;
+}
+.dishes-type .dish-container:nth-child(4) {
+  animation-delay: 400ms;
+}
+.dishes-type .dish-container:nth-child(5) {
+  animation-delay: 500ms;
+}
+.dishes-type .dish-container:nth-child(6) {
+  animation-delay: 600ms;
+}
+.dishes-type .dish-container:nth-child(7) {
+  animation-delay: 700ms;
+}
+.dishes-type .dish-container:nth-child(8) {
+  animation-delay: 800ms;
+}
+.dishes-type .dish-container:nth-child(9) {
+  animation-delay: 900ms;
+}
+.dishes-type .dish-container:nth-child(10) {
+  animation-delay: 1000ms;
+}
+.dishes-type .dish-content {
   display: flex;
   flex-direction: column;
   flex: 1;
   gap: 5px;
   padding-left: 10px;
 }
-.dishes-type .dish-container .dish-content h3 {
+.dishes-type .dish-content h3 {
   font-weight: 700;
   font-size: 18px;
 }
-.dishes-type .dish-container .dish-content p {
+.dishes-type .dish-content p {
   font-size: 15px;
 }
-.dishes-type .dish-container .dish-price {
+.dishes-type .dish-price {
   display: flex;
   justify-content: center;
   height: inherit;
@@ -343,8 +447,30 @@ button {
   font-size: 16px;
   padding: 10px;
 }
-.dishes-type .dish-container .dish-checked {
-  display: none;
+.dishes-type .dish-checked {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: -4rem;
+  background-color: #99E2D0;
+  width: 59px;
+  height: 100%;
+  border-radius: 0 15px 15px 0;
+  transition: margin-right 0.5s;
+}
+.dishes-type .fa-solid {
+  font-weight: 900;
+  font-size: 20px;
+  display: flex;
+  position: relative;
+  left: 1rem;
+}
+.dishes-type :hover .dish-checked {
+  margin-right: 0;
+}
+.dishes-type :hover .dish-checked .fa-solid {
+  animation: 1s check-mark ease-in-out;
 }
 
 /*# sourceMappingURL=styles.css.map */
