@@ -1,3 +1,9 @@
+header nav,
+main section,
+footer {
+    padding: 0 1rem;
+}
+
 /*Localisation "Paris Belleville*/
 h2 {
     font-family: 'Roboto', sans-serif;
@@ -6,11 +12,13 @@ h2 {
     padding-bottom: 10px;
     font-size: 24px;
 }
+
 /*page restaurant image*/
 .cover-image {
     height: 275px;
     width: 100%;
 }
+
 /*menu pages restaurants*/
 .menus-container {
     background-color: rgba(246, 246, 246, 1);
@@ -25,23 +33,40 @@ h2 {
         padding-top: 20px;
         font-family: 'Shrikhand', cursive;
     }
+
     h3 {
         font-family: 'Roboto', sans-serif;
         font-weight: 300;
     }
 
-    .title-container{
+    .title-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        i{
+
+        i {
+            position: absolute;
+            right: 0;
             font-size: 1.5rem;
-                margin-top: 17px;
-                margin-right: 40px;
+            margin-top: 17px;
+            margin-right: 40px;
+        }
+
+        .fa-heart.fa-solid {
+            background-image: linear-gradient(to top, #9356DC, #FF79DA);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            opacity: 0;
+
+            &:hover {
+                opacity: 1;
+            }
         }
     }
-    .cta{
-    display: flex;
-    justify-content: center;
+
+    .cta {
+        display: flex;
+        justify-content: center;
     }
 }

@@ -1,0 +1,32 @@
+@keyframes check-mark {
+    0% {
+        transform: rotateX(-270deg);
+        
+    }
+
+    100% {
+        transform: rotateX(0);
+    }
+}
+
+@keyframes disappear {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(0);
+    }
+}
+
+@keyframes glissement {
+    from {
+        margin-left: 110%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}

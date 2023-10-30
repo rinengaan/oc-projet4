@@ -8,12 +8,13 @@
     &>h3 {
         position: relative;
         padding-bottom: 10px;
-        &::before{
-        content: "";
-        position: absolute;
-        top: 27px;
-        border-bottom:3px solid rgba(153, 226, 208, 1) ;
-        width: 40px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 27px;
+            border-bottom: 3px solid rgba(153, 226, 208, 1);
+            width: 40px;
         }
     }
 
@@ -27,37 +28,70 @@
         font-family: 'Roboto', sans-serif;
         font-weight: 500;
         margin-bottom: 10px;
+        overflow: hidden;
         @include button-shadow;
+        animation: glissement 1s backwards;
 
-        .dish-content {
-            display: flex;
-            flex-direction: column;
-            flex: 1;
-            gap: 5px;
-            padding-left: 10px;
-
-            h3 {
-                font-weight: 700;
-                font-size: 18px;
-            }
-
-            p {
-                font-size: 15px;
+        @for $i from 1 through 10 {
+            &:nth-child(#{$i}) {
+                animation-delay: 100ms*$i;
             }
         }
+    }
 
-        .dish-price {
-            display: flex;
-            justify-content: center;
-            height: inherit;
-            align-items: flex-end;
+    .dish-content {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        gap: 5px;
+        padding-left: 10px;
+
+        h3 {
             font-weight: 700;
-            font-size: 16px;
-            padding: 10px;
+            font-size: 18px;
         }
 
-        .dish-checked {
-            display: none;
+        p {
+            font-size: 15px;
+        }
+    }
+
+    .dish-price {
+        display: flex;
+        justify-content: center;
+        height: inherit;
+        align-items: flex-end;
+        font-weight: 700;
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .dish-checked {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: -4rem;
+        background-color: $tertiary-color;
+        width: 59px;
+        height: 100%;
+        border-radius: 0 15px 15px 0;
+        transition: margin-right 0.5s;
+    }
+
+    .fa-solid {
+        font-weight: 900;
+        font-size: 20px;
+        display: flex;
+        position: relative;
+        left: 1rem;
+    }
+
+    :hover .dish-checked {
+        margin-right: 0;
+
+        .fa-solid {
+            animation: 1s check-mark ease-in-out;
         }
     }
 }
