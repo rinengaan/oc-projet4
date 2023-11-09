@@ -22,20 +22,7 @@
     }
 }
 
-.loader {
-    position: fixed;
-    display: grid;
-    place-items: center;
-    background-color: whitesmoke;
-    height: 100vh;
-    inset: 0;
-    z-index: 2;
-    opacity: 0.9;
-    animation: disappear 1s;
-    animation-fill-mode: forwards;
-    animation-delay: 2s;
-    transform-origin: top;
-}
+
 
 @media (min-width: $size-media) {
     .explorer {

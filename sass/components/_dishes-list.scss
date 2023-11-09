@@ -1,4 +1,8 @@
 /*pages rstaurants menus*/
+.menus-container {
+    padding: 0 15px;
+}
+
 .dishes-type {
     display: flex;
     flex-direction: column;
@@ -95,4 +99,32 @@
             animation: 1s check-mark ease-in-out;
         }
     }
+}
+
+@media (min-width: $size-media) {
+    .menus-container {
+        margin: -40px auto 0 auto;
+        width: 73%;
+    }
+
+    .dishes-type {
+        margin: auto;
+        width: 60%;
+        padding-bottom: 24px;
+    }
+
+}
+@media (min-width: $size-media){
+.menus-container .title-container{
+        gap: 16px;
+            justify-content: center;
+            padding-bottom: 50px;
+            
+}
+.menus-container h2{
+    font-size: 28px;
+}
+.menus-container .title-container .fa-heart{
+        margin-right: 30%;
+}
 }

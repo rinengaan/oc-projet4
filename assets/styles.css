@@ -20,12 +20,14 @@
 }
 @keyframes glissement {
   from {
-    margin-left: 110%;
+    margin-left: 60%;
     width: 300%;
+    opacity: 0;
   }
   to {
     margin-left: 0%;
     width: 100%;
+    opacity: 1;
   }
 }
 *,
@@ -82,6 +84,106 @@ nav .fa-solid {
   header .nav {
     box-shadow: none;
     padding: 30px 0 30px 0;
+  }
+}
+.loader-content {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  z-index: 2;
+  visibility: hidden;
+  animation: FadeOut 2.5s linear;
+}
+
+@keyframes FadeOut {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  50% {
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+.loader {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader .spin {
+  width: 200px;
+  height: 200px;
+  border: 0 solid #9356DC;
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+}
+
+.loader .spin:nth-child(1) {
+  border-bottom-width: 8px;
+  border-color: #9356DC;
+  animation: rotate-1 2s linear infinite;
+}
+
+.loader .spin:nth-child(2) {
+  border-right-width: 8px;
+  border-color: #FF79DA;
+  animation: rotate-2 2s linear infinite;
+}
+
+.loader .spin:nth-child(3) {
+  border-top-width: 8px;
+  border-color: #99E2D0;
+  animation: rotate-3 2s linear infinite;
+}
+
+@keyframes rotate-1 {
+  0% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+    opacity: 1;
+  }
+}
+@keyframes rotate-2 {
+  0% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+  }
+}
+@keyframes rotate-3 {
+  0% {
+    opacity: 0;
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+  }
+  20% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
   }
 }
 .main-content {
@@ -157,6 +259,13 @@ nav .fa-solid {
   justify-content: center;
 }
 
+/*image pages restaurants*/
+@media (min-width: 1024px) {
+  .cover-image {
+    height: 383px;
+    object-fit: cover;
+  }
+}
 /*Section explorer*/
 .explorer {
   background-color: #F6F6F6;
@@ -177,21 +286,6 @@ nav .fa-solid {
   font-family: "Roboto", sans-serif;
   color: rgb(53, 53, 53);
   margin: 10px 0 29px 5px;
-}
-
-.loader {
-  position: fixed;
-  display: grid;
-  place-items: center;
-  background-color: whitesmoke;
-  height: 100vh;
-  inset: 0;
-  z-index: 2;
-  opacity: 0.9;
-  animation: disappear 1s;
-  animation-fill-mode: forwards;
-  animation-delay: 2s;
-  transform-origin: top;
 }
 
 @media (min-width: 1024px) {
@@ -461,6 +555,10 @@ button:hover {
 }
 
 /*pages rstaurants menus*/
+.menus-container {
+  padding: 0 15px;
+}
+
 .dishes-type {
   display: flex;
   flex-direction: column;
@@ -570,6 +668,31 @@ button:hover {
 }
 .dishes-type :hover .dish-checked .fa-solid {
   animation: 1s check-mark ease-in-out;
+}
+
+@media (min-width: 1024px) {
+  .menus-container {
+    margin: -40px auto 0 auto;
+    width: 73%;
+  }
+  .dishes-type {
+    margin: auto;
+    width: 60%;
+    padding-bottom: 24px;
+  }
+}
+@media (min-width: 1024px) {
+  .menus-container .title-container {
+    gap: 16px;
+    justify-content: center;
+    padding-bottom: 50px;
+  }
+  .menus-container h2 {
+    font-size: 28px;
+  }
+  .menus-container .title-container .fa-heart {
+    margin-right: 30%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
