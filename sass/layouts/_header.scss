@@ -3,36 +3,44 @@ header {
     background-color: rgba(234, 234, 234, 1);
 
     h1 {
-            font-family: "Shrikhand", cursive;
-            text-align: center;
-            padding: 0 20px;
-            height: 63px;
-            width: 100%;
-            font-size: 30px;
-            line-height: 63px;
-            background-color: white;
-
+        font-family: "Shrikhand", cursive;
+        text-align: center;
+        padding: 0 20px;
+        height: 63px;
+        width: 100%;
+        font-size: 30px;
+        line-height: 63px;
+        background-color: white;
     }
-    .title-arrow{
+
+    .title-arrow {
         width: auto;
     }
 }
 
 nav {
     display: flex;
-        position: relative;
-        justify-content: flex-start;
-        width: 100%;
-        align-items: center;
-        gap: 55px;
-        background-color: white;
-        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-        z-index: 1;
+    position: relative;
+    justify-content: flex-start;
+    width: 100%;
+    align-items: center;
+    gap: 55px;
+    background-color: white;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+
     .fa-solid {
         display: flex;
-            align-items: center;
-            padding: 20px;
-            font-size: 26px;
-            justify-content: center;
+        align-items: center;
+        padding: 20px;
+        font-size: 26px;
+        justify-content: center;
+    }
+}
+
+@media (min-width: $size-media) {
+    header .nav {
+        box-shadow: none;
+        padding: 30px 0 30px 0;
     }
 }

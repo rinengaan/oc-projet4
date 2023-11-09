@@ -1,21 +1,19 @@
 /*fonctionnement index*/
 .tuto {
     counter-reset: numbers;
-    padding-left: 1rem;
-    margin: 3rem 0;
+    padding: 0 17px;
 
     & ol {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         gap: 10px;
-        margin: 1rem;
+        
     }
 
     & li {
         position: relative;
         list-style-type: none;
         background-color: #f6f6f6;
-        
         border: 1px transparent;
         flex-grow: 1;
         line-height: 72px;
@@ -51,5 +49,24 @@
         margin-left: 46px;
         margin-right: 30px;
         color: rgba(126, 126, 126, 1);
+    }
+
+    @media (min-width: $size-media) {
+        padding: 0 162px;
+
+        & h2 {
+            padding: 48px 0 22px;
+        }
+
+        & ol {
+            display: flex;
+            flex-direction: row;
+            padding-bottom: 52px;
+            gap: 25px;
+        }
+
+        & li {
+            width: 30%;
+        }
     }
 }

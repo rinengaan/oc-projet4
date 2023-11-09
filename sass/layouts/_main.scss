@@ -1,16 +1,25 @@
-header nav,
-main section,
-footer {
-    padding: 0 1rem;
+@import "../utils/mixins";
+
+.main-content {
+    width: 100%;
+    max-width: 1440px;
+    box-sizing: border-box;
+
+    @media (min-width: $size-media) {
+        margin: auto;
+    }
+
+    h2 {
+        font-family: 'Roboto', sans-serif;
+        padding-left: 15px;
+        padding-bottom: 10px;
+        font-size: 24px;
+    }
 }
 
 /*Localisation "Paris Belleville*/
-h2 {
-    font-family: 'Roboto', sans-serif;
+.location h2 {
     margin-top: 10px;
-    padding-left: 15px;
-    padding-bottom: 10px;
-    font-size: 24px;
 }
 
 /*page restaurant image*/
@@ -44,7 +53,7 @@ h2 {
         justify-content: space-between;
         align-items: center;
 
-        i {
+        .fa-heart {
             position: absolute;
             right: 0;
             font-size: 1.5rem;
@@ -53,15 +62,7 @@ h2 {
         }
 
         .fa-heart.fa-solid {
-            background-image: linear-gradient(to top, #9356DC, #FF79DA);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            opacity: 0;
-
-            &:hover {
-                opacity: 1;
-            }
+            @include heart;
         }
     }
 
