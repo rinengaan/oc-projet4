@@ -12,6 +12,25 @@
     }
 }
 
+.new {
+    &::before {
+        content: "Nouveau";
+        position: absolute;
+        width: 80px;
+        height: 29px;
+        top: 5px;
+        right: 15px;
+        font-family: Roboto;
+        color: rgba(0, 135, 102, 1);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 29px;
+        letter-spacing: 0em;
+        text-align: center;
+        background: $tertiary-color;
+    }
+}
+
 .menu-cards {
     .cards-content {
         display: flex;
@@ -42,6 +61,7 @@
 
     a {
         font-family: 'Roboto', sans-serif;
+        position: relative;
         text-decoration: none;
         color: black;
     }
