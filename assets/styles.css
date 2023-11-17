@@ -30,6 +30,59 @@
     opacity: 1;
   }
 }
+@keyframes FadeOut {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  50% {
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+@keyframes rotate-1 {
+  0% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+    opacity: 1;
+  }
+}
+@keyframes rotate-2 {
+  0% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+  }
+}
+@keyframes rotate-3 {
+  0% {
+    opacity: 0;
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+  }
+  20% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+  }
+}
 *,
 ::after,
 ::before {
@@ -99,20 +152,6 @@ nav .fa-solid {
   animation: FadeOut 2.5s linear;
 }
 
-@keyframes FadeOut {
-  0% {
-    visibility: visible;
-    opacity: 1;
-  }
-  50% {
-    visibility: visible;
-    opacity: 1;
-  }
-  100% {
-    visibility: hidden;
-    opacity: 0;
-  }
-}
 .loader {
   position: relative;
   display: flex;
@@ -147,45 +186,6 @@ nav .fa-solid {
   animation: rotate-3 2s linear infinite;
 }
 
-@keyframes rotate-1 {
-  0% {
-    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
-    opacity: 0;
-  }
-  20% {
-    opacity: 0.3;
-  }
-  100% {
-    transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
-    opacity: 1;
-  }
-}
-@keyframes rotate-2 {
-  0% {
-    transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
-    opacity: 0;
-  }
-  20% {
-    opacity: 0.3;
-  }
-  100% {
-    opacity: 1;
-    transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
-  }
-}
-@keyframes rotate-3 {
-  0% {
-    opacity: 0;
-    transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
-  }
-  20% {
-    opacity: 0.3;
-  }
-  100% {
-    opacity: 1;
-    transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
-  }
-}
 .main-content {
   width: 100%;
   max-width: 1440px;
@@ -250,6 +250,7 @@ nav .fa-solid {
   -webkit-background-clip: text;
   color: transparent;
   opacity: 0;
+  transition: all 0.5s linear;
 }
 .menus-container .title-container .fa-heart.fa-solid:hover {
   opacity: 1;
@@ -301,10 +302,22 @@ nav .fa-solid {
   }
 }
 footer {
+  display: flex;
+  flex-direction: column;
   background-color: rgb(53, 53, 53);
-  gap: 16px;
   color: white;
   padding-left: 1rem;
+}
+footer .links-bold {
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px;
+}
+footer .links-normal {
+  display: flex;
+  flex-direction: column;
+  margin-right: 70px;
 }
 footer h3 {
   font-family: "Shrikhand", cursive;
@@ -321,7 +334,7 @@ footer p {
 footer i {
   padding-right: 15px;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   footer {
     display: flex;
     flex-direction: row;
@@ -333,23 +346,23 @@ footer i {
   footer h3 {
     order: 2;
   }
-}
-footer .links {
-  flex-direction: row;
-  order: 1;
-  margin-right: 29px;
-  gap: 16px;
-}
-footer .links-bold {
-  font-weight: 700;
-  display: flex;
-  gap: 16px;
-  margin-right: 30px;
-}
-footer .links-normal {
-  display: flex;
-  margin-right: 70px;
-  gap: 10px;
+  footer .links {
+    flex-direction: row;
+    order: 1;
+    margin-right: 29px;
+    gap: 16px;
+  }
+  footer .links-bold {
+    font-weight: 700;
+    flex-direction: row;
+    gap: 16px;
+    margin-right: 30px;
+  }
+  footer .links-normal {
+    flex-direction: row;
+    margin-right: 70px;
+    gap: 10px;
+  }
 }
 
 .location {
@@ -430,6 +443,7 @@ footer .links-normal {
   -webkit-background-clip: text;
   color: transparent;
   opacity: 0;
+  transition: all 0.5s linear;
 }
 .menu-cards .fa-solid.fa-heart:hover {
   opacity: 1;
@@ -641,7 +655,7 @@ button:hover {
   align-items: flex-end;
   font-weight: 700;
   font-size: 16px;
-  padding: 10px;
+  padding: 10px 20px;
 }
 .dishes-type .dish-checked {
   color: white;

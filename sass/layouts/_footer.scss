@@ -1,8 +1,23 @@
 footer {
-    background-color: rgba(53, 53, 53, 1);
-    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(53, 53, 53);
     color: white;
     padding-left: 1rem;
+
+
+    .links-bold {
+        font-weight: 500;
+        display: flex;
+        flex-direction: column;
+        margin-right: 30px;
+    }
+
+    .links-normal {
+        display: flex;
+        flex-direction: column;
+        margin-right: 70px;
+    }
 
     h3 {
         font-family: 'Shrikhand', cursive;
@@ -22,34 +37,38 @@ footer {
         padding-right: 15px;
     }
 
-    @media (min-width: 1200px) {
-        display: flex;
-        flex-direction: row;
-        align-items: baseline;
-        justify-content: flex-end;
-        gap: 16px;
-        padding: 60px 68px 18px 0;
+    @media (min-width: $size-media) {
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+            justify-content: flex-end;
+            gap: 16px;
+            padding: 60px 68px 18px 0;
 
-    h3 {
-            order:2;
+        h3 {
+            order: 2;
+        }
+        .links {
+            flex-direction: row;
+            order: 1;
+            margin-right: 29px;
+            gap: 16px;
+        }
+    
+        .links-bold {
+            font-weight: 700;
+            
+            flex-direction: row;
+            gap: 16px;
+            margin-right: 30px;
+        }
+    
+        .links-normal {
+            
+            flex-direction: row;
+            margin-right: 70px;
+            gap: 10px;
         }
     }
-    .links{
-            flex-direction: row;
-                order: 1;
-                margin-right: 29px;
-                gap: 16px;
-    }
-    .links-bold{
-        font-weight: 700;
-        display: flex;
-        gap: 16px;
-        margin-right: 30px;
 
-    }
-    .links-normal{
-        display: flex;
-        margin-right: 70px;
-        gap: 10px;
-    }
 }

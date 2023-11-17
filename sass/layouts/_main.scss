@@ -13,22 +13,7 @@
     animation: FadeOut 2.5s linear;
 }
 
-@keyframes FadeOut {
-    0% {
-        visibility: visible;
-        opacity: 1;
-    }
 
-    50% {
-        visibility: visible;
-        opacity: 1;
-    }
-
-    100% {
-        visibility: hidden;
-        opacity: 0;
-    }
-}
 
 .loader {
     position: relative;
@@ -64,53 +49,7 @@
     animation: rotate-3 2s linear infinite;
 }
 
-@keyframes rotate-1 {
-    0% {
-        transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
-        opacity: 0;
-    }
 
-    20% {
-        opacity: 0.3;
-    }
-
-    100% {
-        transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
-        opacity: 1;
-    }
-}
-
-@keyframes rotate-2 {
-    0% {
-        transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
-        opacity: 0;
-    }
-
-    20% {
-        opacity: 0.3;
-    }
-
-    100% {
-        opacity: 1;
-        transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
-    }
-}
-
-@keyframes rotate-3 {
-    0% {
-        opacity: 0;
-        transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
-    }
-
-    20% {
-        opacity: 0.3;
-    }
-
-    100% {
-        opacity: 1;
-        transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
-    }
-}
 
 .main-content {
     width: 100%;
