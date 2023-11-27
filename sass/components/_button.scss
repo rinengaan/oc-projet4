@@ -1,27 +1,28 @@
-    /*boutton page index*/
-    button {
-        font-size: 16px;
-        font-weight: 500;
-        color: white;
-        border: none;
-        margin-bottom: 30px;
-        @include base-button;
-        @include button-shadow;
-        opacity: 1;
-        transition: opacity 0.3s linear;
-        &:hover {
-            opacity: 0.8;
-            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
-        }
-    }
+/*boutton page index*/
+button {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    border: none;
+    margin-bottom: 30px;
+    @include base-button;
+    @include button-shadow;
+    opacity: 1;
+    transition: opacity 0.3s linear;
 
-    /*boutton pages restaurants*/
-    .button-order {
-        font-size: 16px;
-        font-weight: 500;
-        color: white;
-        border: none;
-        margin-bottom: 30px;
-        @include base-button(186px);
-        @include button-shadow;
+    &:hover {
+        opacity: 0.8;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
     }
+}
+
+/*boutton pages restaurants*/
+.button-order {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    border: none;
+    margin-bottom: 30px;
+    @include base-button(186px);
+    @include button-shadow;
+}

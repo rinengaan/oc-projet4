@@ -206,16 +206,12 @@ nav .fa-solid {
   font-size: 24px;
 }
 
-/*Localisation "Paris Belleville*/
-.location h2 {
-  margin-top: 10px;
-}
-
 /*page restaurant image*/
 .cover-image {
   height: 275px;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /*menu pages restaurants*/
@@ -371,6 +367,9 @@ footer i {
 .location {
   background-color: #F6F6F6;
 }
+.location h2 {
+  margin-top: 10px;
+}
 .location form {
   display: flex;
   position: relative;
@@ -435,7 +434,8 @@ footer i {
   height: 231px;
   overflow: hidden;
   border-radius: 20px 20px 0 0;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .menu-cards .cards-content .card {
   position: relative;
@@ -742,6 +742,4 @@ button:hover {
   .menus-container .title-container .fa-heart {
     margin-right: 25%;
   }
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */

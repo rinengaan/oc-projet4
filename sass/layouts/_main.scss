@@ -1,4 +1,4 @@
-@import "../utils/mixins";
+
 
 .loader-content {
     width: 100%;
@@ -12,8 +12,6 @@
     visibility: hidden;
     animation: FadeOut 2.5s linear;
 }
-
-
 
 .loader {
     position: relative;
@@ -49,8 +47,6 @@
     animation: rotate-3 2s linear infinite;
 }
 
-
-
 .main-content {
     width: 100%;
     max-width: 1440px;
@@ -62,21 +58,16 @@
 
     h2 {
         font-family: 'Roboto', sans-serif;
-        padding-left: 15px;
         padding-bottom: 10px;
         font-size: 24px;
     }
-}
-
-/*Localisation "Paris Belleville*/
-.location h2 {
-    margin-top: 10px;
 }
 
 /*page restaurant image*/
 .cover-image {
     height: 275px;
     width: 100%;
+    object-fit: cover;
 }
 
 /*menu pages restaurants*/
@@ -127,6 +118,5 @@
 @media (min-width: $size-media) {
     .cover-image {
         height: 383px;
-        object-fit: cover;
     }
 }
