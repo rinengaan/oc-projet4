@@ -1,7 +1,59 @@
-/*pages rstaurants menus*/
-.menus-container {
-    padding: 0 15px;
+
+/*page restaurant image*/
+.cover-image {
+    height: 275px;
+    width: 100%;
+    object-fit: cover;
+    @media (min-width: $size-media) {
+        height: 383px;
+    }
 }
+
+/*menu pages restaurants*/
+.menus-container {
+    background-color: rgba(246, 246, 246, 1);
+    border-radius: 35px 35px 0 0;
+    padding: 0 15px;
+    position: relative;
+    margin-top: -50px;
+
+    h2 {
+        font-weight: 600;
+        font-style: italic;
+        font-size: 25px;
+        padding-top: 20px;
+        font-family: 'Shrikhand', cursive;
+    }
+
+    h3 {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+    }
+
+    .title-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .fa-heart {
+            position: absolute;
+            right: 0;
+            font-size: 1.5rem;
+            margin-top: 17px;
+            margin-right: 40px;
+        }
+
+        .fa-heart.fa-solid {
+            @include heart;
+        }
+    }
+
+    .cta {
+        display: flex;
+        justify-content: center;
+    }
+}
+
 
 .dishes-type {
     display: flex;

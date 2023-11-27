@@ -3,6 +3,7 @@
 }
 
 @mixin base-button($width: 218px) {
+    cursor: pointer;
     border-radius: 25px;
     width: $width;
     height: 50px;
@@ -19,15 +20,13 @@
 
 @mixin heart {
     background-image: linear-gradient(to top, #9356DC, #FF79DA);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        opacity: 0;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    opacity: 0;
+    transition: all 0.5s linear;
 
-        transition: all 0.5s linear;
-
-        &:hover {
-                opacity: 1;
-            }
-                        
+    &:hover {
+        opacity: 1;
+    }
 }
