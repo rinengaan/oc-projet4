@@ -10,7 +10,10 @@ En plus des systèmes classiques de réservation, les clients pourront composer 
 Finis, les temps d'attente au restaurant !
 
 # Compétences
-La capacité à créer des interfaces web mobile-first
-intégration d'animations CSS
-maîtrise de Sass pour structurer et optimiser le CSS
+La capacité à créer des interfaces web mobile-first, 
+
+intégration d'animations CSS, 
+
+maîtrise de Sass pour structurer et optimiser le CSS, 
+
 capacité à utiliser Git et GitHub pour la gestion de version et la collaboration sur des projets  
